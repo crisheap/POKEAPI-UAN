@@ -98,7 +98,7 @@ y establece la tipografía y tamaño de fuente */
       border: 3px solid #000000;
       border-radius: 100%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      color: #fff;
+      color: #000000;
       font-weight: bold;
       padding: 1rem;
     }
