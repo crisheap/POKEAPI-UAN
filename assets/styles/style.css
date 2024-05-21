@@ -7,34 +7,39 @@ body {
     background-image: url(../images/pokemon_1.webp);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-  }
+  }/* Estiliza el cuerpo del documento con una altura de 100% de la ventana,
+utiliza flexbox para distribuir elementos, define un color y una imagen de fondo,
+y establece la tipografía y tamaño de fuente */
 
   .bg-dager {
     background-color: #ff0000;
-  }
+  }/* Aplica un color de fondo rojo a los elementos con la clase .bg-dager */
 
   #root {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+  }/* Estiliza el contenedor con el id "root" para que sus hijos se distribuyan en filas múltiples (flex-wrap) y se centren horizontalmente */
 
   .card {
-    background-color: #f50a0a63;
+    background: rgb(255,0,0);
+    background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(96,81,81,1) 41%, rgba(255,255,255,0.6867121848739496) 71%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Cambiado para mejor adaptabilidad en pantallas pequeñas */
-    max-width: 15rem; /* Asegura que no crezca más allá de un tamaño razonable */
+    width: 100%;
+    max-width: 15rem;
     height: auto;
     margin: 2px;
     border: 3px solid #000000;
     border-radius: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    color: #fff;
+    color: #000000;
+    font-weight: bold;
     padding: 1rem;
-  }
+  }/* Estiliza las tarjetas (.card) con un fondo degradado, usa flexbox para centrar su contenido, define tamaños, bordes, sombra, color de texto, y un relleno interno */
+
   div .container-fluid{
     padding: none;
   }
@@ -42,21 +47,22 @@ body {
   .card-image {
     height: 100px;
     width: 100px;
-  }
+  }/* Define el tamaño de las imágenes dentro de las tarjetas */
 
   footer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  }/* Centra el contenido del footer utilizando flexbox */
 
   .d-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}/* Aplica flexbox para centrar los elementos con la clase .d-flex */
 
 @media screen and (max-width: 900px) {
+ /* Aplica los estilos dentro del bloque cuando la pantalla tenga un ancho máximo de 900px */
     body {
       height: 100vh;
       display: flex;
@@ -79,19 +85,21 @@ body {
     }
 
     .card {
-      background-color: #f50a0a63;
+      background: rgb(255,0,0);
+      background: linear-gradient(0deg, rgba(255,0,0,1) 0%, rgba(96,81,81,1) 41%, rgba(255,255,255,0.6867121848739496) 71%);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100%; /* Cambiado para mejor adaptabilidad en pantallas pequeñas */
-      max-width: 15rem; /* Asegura que no crezca más allá de un tamaño razonable */
+      width: 100%;
+      max-width: 15rem;
       height: auto;
       margin: 2px;
       border: 3px solid #000000;
       border-radius: 100%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       color: #fff;
+      font-weight: bold;
       padding: 1rem;
     }
 
