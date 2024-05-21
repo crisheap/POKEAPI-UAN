@@ -1,102 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Indica que el documento es HTML5 y establece el idioma del contenido como inglés. -->
+<!-- Indica que el documento es HTML5 y establece el idioma del contenido como inglés. -->
 
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Especifica la codificación de caracteres como UTF-8, lo que permite utilizar una amplia gama de caracteres. -->
+<head>
+  <meta charset="UTF-8" />
+  <!-- Especifica la codificación de caracteres como UTF-8, lo que permite utilizar una amplia gama de caracteres. -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Ajusta el viewport para que el diseño sea responsive y se vea bien en dispositivos móviles. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ajusta el viewport para que el diseño sea responsive y se vea bien en dispositivos móviles. -->
 
-    <script type="module" defer src="./api/main.js"></script>
-    <!-- Carga el script main.js como un módulo de JavaScript y lo difiere, lo que significa que se ejecutará después de que el documento haya sido analizado completamente. -->
+  <script type="module" defer src="./api/main.js"></script>
+  <!-- Carga el script main.js como un módulo de JavaScript y lo difiere, lo que significa que se ejecutará después de que el documento haya sido analizado completamente. -->
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
-    <!-- Incluye el CSS de Bootstrap desde una CDN para estilizar el documento. La propiedad integrity permite verificar que el recurso no ha sido alterado. La propiedad crossorigin permite cargar recursos de dominios diferentes de manera segura. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <!-- Incluye el CSS de Bootstrap desde una CDN para estilizar el documento. La propiedad integrity permite verificar que el recurso no ha sido alterado. La propiedad crossorigin permite cargar recursos de dominios diferentes de manera segura. -->
 
-    <link rel="stylesheet" href="./assets/styles/style.css" />
-    <!-- Incluye un archivo CSS local para estilizar el documento. -->
+  <link rel="stylesheet" href="./assets/styles/style.css" />
+  <!-- Incluye un archivo CSS local para estilizar el documento. -->
 
-    <title>POKEAPI-UAN</title>
-    <!-- Establece el título del documento que se muestra en la pestaña del navegador. -->
-  </head>
+  <title>POKEAPI-UAN</title>
+  <!-- Establece el título del documento que se muestra en la pestaña del navegador. -->
+</head>
 
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <p class="navbar-brand">La Pokédex</p>
-          <!-- Enlace de la marca de la barra de navegación que lleva al inicio de la página. -->
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <p class="navbar-brand"><b>La Pokédex</b></p>
+        <!-- Enlace de la marca de la barra de navegación que lleva al inicio de la página. -->
 
-            <form class="d-flex" role="search">
-              <input
-                id="barra-pokemon"
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <!-- Campo de entrada para búsqueda con un id específico. -->
+        <form class="d-flex" role="search">
+          <input id="barra-pokemon" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <!-- Campo de entrada para búsqueda con un id específico. -->
 
-              <button
-                id="buscar-pokemon"
-                class="btn btn-outline-success"
-                type="submit"
-              >
-                <span>Buscar</span>
-              </button>
-              <!-- Botón de búsqueda con un id específico. -->
-            </form>
-            <!-- Formulario de búsqueda alineado de forma flexible (d-flex). -->
-          </div>
-        </div>
-      </nav>
-      <!-- Barra de navegación utilizando clases de Bootstrap para la estructura y estilos. -->
-    </header>
+          <button id="buscar-pokemon" class="btn btn-outline-success" type="submit">
+            <span>Buscar</span>
+          </button>
+          <!-- Botón de búsqueda con un id específico. -->
+        </form>
+        <!-- Formulario de búsqueda alineado de forma flexible (d-flex). -->
+      </div>
+      </div>
+    </nav>
+    <!-- Barra de navegación utilizando clases de Bootstrap para la estructura y estilos. -->
+  </header>
 
-    <main>
-      <div id="root"></div>
-      <!-- Contenedor principal donde se inyectará contenido dinámico. -->
-    </main>
+  <main>
+    <div id="root"></div>
+    <!-- Contenedor principal donde se inyectará contenido dinámico. -->
+  </main>
 
-    <footer>
-      <nav aria-label="Page navigation example">
-        <ul class="pagination">
-          <li id="previous" class="page-item"><a class="page-link" href="#">Previous</a></li>
-          <!-- Elemento de paginación que permite navegar a la página anterior. -->
+  <footer>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination">
+        <li id="previous" class="page-item"><a class="page-link" href="#">anterior</a></li>
+        <!-- Elemento de paginación que permite navegar a la página anterior. -->
 
-          <!--
+        <!--
           <li class="page-item"><a class="page-link" href="#">1</a></li>
           <li class="page-item"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           -->
-          <!-- Elementos de paginación comentados que representarían diferentes páginas. -->
+        <!-- Elementos de paginación comentados que representarían diferentes páginas. -->
 
-          <li id="next" class="page-item"><a class="page-link" href="#">Next</a></li>
-          <!-- Elemento de paginación que permite navegar a la página siguiente. -->
-        </ul>
-      </nav>
-      <!-- Navegación de pie de página para la paginación. -->
-    </footer>
+        <li id="next" class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+        <!-- Elemento de paginación que permite navegar a la página siguiente. -->
+      </ul>
+    </nav>
+    <!-- Navegación de pie de página para la paginación. -->
+  </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Script de Popper.js necesario para algunos componentes de Bootstrap como los tooltips y popovers. -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <!-- Script de Popper.js necesario para algunos componentes de Bootstrap como los tooltips y popovers. -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Script de Bootstrap desde una CDN para funcionalidad interactiva. -->
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+  <!-- Script de Bootstrap desde una CDN para funcionalidad interactiva. -->
+</body>
+
 </html>
